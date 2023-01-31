@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+ 
+ }
+
+ 
+ 
+ header{
+   height: 100vh;
+   width: 100%;
+   background-position: center;
+   position: relative;
+ }
+ header nav{
+   position: fixed;
+   width: 100%;
+   left: 0;
+   top: 0;
+   z-index: 12;
+ }
+ .navbar{
+   width: 90%;
+   display: flex;
+   margin: 20px auto 0 auto;
+   align-items: center;
+   justify-content: space-between;
+ }
+   header nav .logo{
+   height: 80px;
+   width: 150px;
+ }
+ .logo img{
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+ }
+ nav .menu{
+   display: flex;
+ }
+ nav .menu li{
+   list-style: none;
+   margin: 0 10px;
+ }
+ nav .menu a{
+  color: #0f0501;
+   font-size: 17px;
+   font-weight: 500;
+   text-decoration: none;
+ }
+ nav .menu a:hover{
+   color: #1b1b1b;
+ }
+ nav .search-box{
+   position: relative;
+   height: 40px;
+   width: 250px;
+ }
+ .search-box input[type="text"]{
+   position: absolute;
+   font-size: 18px;
+   height: 100%;
+   width: 100%;
+   border-radius: 8px;
+   outline: none;
+   color: #2c3350;
+   border: 2px solid #2c3350;
+   background: #f2f2f2;
+   padding: 0 10px 0 40px;
+ }
+ .search-box a{
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   font-size: 20px;
+   color: #2c3350;
+   transform: translateY(-50%);
+   border-right: 2px solid #2c3350;
+   padding: 0 5px 0 0;
+ }
+ .text-content{
+   position: absolute;
+   top: 33%;
+   left: 7%;
+   z-index: 12;
+ }
+ header .text-content .text{
+   font-size: 27px;
+   color: #2c3350;
+   padding:10px ;
+ }
+ header .text-content .name{
+ color: #2c3350;
+  font-size: 75px;
+  font-weight: 600;
+  margin: -20px 0 0 -3px;
+ }
+ header .text-content .job{
+  color: #2c3350;
+  font-size: 40px;
+  margin: 5px 0;
+  margin-top: -4px;
+  display: flex;
+ }
+ .text-content .typing-text{
+   margin-left: 10px;
+   overflow: hidden;
+   white-space: nowrap;
+   border-right: 4px solid #010f11;
+   animation: typing 6s steps(167) infinite;
+ }
+ @keyframes typing{
+   0%{
+     width: 0ch;
+   }
+   50%{
+     width: 30ch;
+   }
+   100%{
+     width: 0ch;
+   }
+ }
+ .text-content .job .one{
+   color: #1f4542;
+ }
+ .text-content .job .two{
+   color: #1f4542;
+ }
+ .buttons{
+   margin: 20px 0 0 50px;
+   
+ }
+ .buttons a{
+     text-decoration: none;
+     font-family: sans-serif;
+ }
+ .text-content .buttons button{
+   outline: none;
+   margin: 0 10px;
+   border: none;
+   border-radius: 6px;
+   font-size: 18px;
+   color: #fff;
+   padding: 8px 16px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background-image: linear-gradient( 135deg, #6cc075     10%, #aebec1 100%);
+ }
+ .buttons button:hover{
+   transform: scale(0.97);
+ }
+ .content .girl img{
+   position: absolute;
+   height: 65%;
+   bottom: 0;
+   right: 50px;
+   position: absolute;
+   
+ }
+ header .media-icons{
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   right: 40px;
+   bottom: 40px;
+ }
+ .media-icons a{
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.7;
+  color: #2c3350;
+  transition: all 0.3s ease;
+ }
+ .media-icons a:hover{
+  opacity: 1;
+ }
+ 
+ 
+ 
+ 
+ 
+  ::-webkit-scrollbar {
+     width: 10px;
+ }
+ ::-webkit-scrollbar-track {
+     background: #f1f1f1;
+ }
+ ::-webkit-scrollbar-thumb {
+     background: #888;
+ }
+ ::-webkit-scrollbar-thumb:hover {
+     background: #555;
+ }
+ section{
+     padding: 100px 0;
+     margin: auto;
+ }
+ .max-width{
+     max-width: 1300px;
+     padding: 0 80px;
+     margin: 90px;
+     margin-left: 100px;
+ }
+ 
+ .about .title{
+     text-decoration: underline;
+     text-align: center;
+     margin-bottom: 40px;
+ }
+ 
+ 
+ 
+ .about .about-content .left{
+     width: 45%;
+ }
+ .about .about-content .left img{
+     height: 450px;
+     width: 400px;
+     object-fit: cover;
+     border-radius: 8px;
+     border: 1px solid black;
+ }
+ .about .about-content .right{
+     width: 55%;
+ }
+ 
+ .about .about-content .right .text span{
+     color: #67b8b2;
+ }
+ .about .about-content .right p{
+     text-align: justify;
+     position: relative;
+     bottom: 230px;
+     left: 450px;
+ }
+ .about .about-content .right a{
+     
+     background: #abd1dc;
+     color: rgb(9, 0, 0);
+     font-size: 20px;
+     font-weight: 500;
+     padding: 10px 30px;
+     border-radius: 6px;
+     border: 2px solid #404e4d;
+     transition: all 0.3s ease;
+     position: relative;
+     bottom: 70px;
+     left: 450px;
+ }
+ .about .about-content .right a:hover{
+     color: #67b8b2;
+     background: none;
+ }
+ 
+ 
+ .profile{
+     width: 100%;
+     height: 100vh;
+     }
+     .profile .profile-content{
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: space-between;
+         position: relative;
+         
+     }
+     
+     .profile .title{
+ text-align: center;
+ margin-bottom: 40px;
+     }
+     .profile .profile-content .left{
+         width: 45%;
+     }
+     .profile .profile-content .left img{
+         height: 450px;
+         width: 400px;
+         position: relative;
+         bottom: 40px;
+         object-fit: cover;
+         border-radius: 15px;
+         border: 1px solid black;
+     }
+     .profile .profile-content .right{
+         width: 55%;
+         margin-bottom: 70px;
+     }
+     .profile .profile-content .right ul li{
+     padding: 16px;
+     list-style: none;
+     }
+     .profile .profile-content .right .text{
+         font-size: 25px;
+         font-weight: 600;
+         margin-bottom: 10px;
+     }
+     .profile .profile-content .right .text span{
+         color:#619691;
+     }
+     .profile .profile-content .right p{
+         text-align: justify;
+     }
+     .profile .profile-content .right a{
+         display: inline-block;
+         background:#67b8b2;
+         color: #fff;
+         font-size: 20px;
+         font-weight: 500;
+         padding: 10px 30px;
+         margin-top: 20px;
+         border-radius: 6px;
+         border: 2px solid#67b8b2;
+         transition: all 0.3s ease;
+     }
+     .profile .profile-content .right a:hover{
+         color:#67b8b2;
+         background: none;
+     }
+ 
+ 
+     .services, .teams{
+         color:#fff;
+     
+     }
+     .services .title{
+         text-align: center;
+         margin-bottom: 40px;
+         text-decoration: underline;
+     }
+     .services .title::before,
+     .teams .title::before{
+         background: #1b1b1b;
+     }
+     .services .title::after,
+     .teams .title::after{
+         background: #1b1b1b;
+     }
+     .services .serv-content {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+     }
+ 
+     .services .serv-content .card{
+         width: calc(33% - 20px);
+         background: #1b1b1b;
+         text-align: center;
+         border-radius: 6px;
+         padding: 50px 25px;
+         cursor: pointer;
+      
+         transition: all 0.3s ease;
+     }
+     .services .serv-content .card:hover{
+         background: #67b8b2;
+     }
+     .services .serv-content .card .box{
+         transition: all 0.3s ease;
+     }
+     .services .serv-content .card:hover .box{
+         transform: scale(1.05);
+     }
+     .services .serv-content .card i{
+         font-size: 50px;
+         color: #67b8b2;
+         transition: color 0.3s ease;
+     }
+     .services .serv-content .card:hover i{
+         color: #fff;
+     }
+     .services .serv-content .card .text{
+         font-size: 25px;
+         font-weight: 500;
+         margin: 10px 0 7px 0;
+     }
+ 
+ .skills{
+     height: 100vh;
+     width: 100%;
+     }
+     .skills .skills-content{
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: space-between;
+     }
+     
+     .skills .title{
+         text-align: center;
+         
+     }
+     .skills .skills-content .column{
+         width: calc(50% - 30px);
+         position: relative;
+         top: 70px;
+     }
+     .skills .skills-content .left .text{
+         font-size: 20px;
+         font-weight: 600;
+         margin-bottom: 10px;
+     }
+     .skills .skills-content .left p{
+         text-align: justify;
+     }
+     .skills .skills-content .left a{
+         display: inline-block;
+         background:#67b8b2;
+         color: #fff;
+         font-size: 18px;
+         font-weight: 500;
+         padding: 8px 16px;
+         margin-top: 20px;
+         border-radius: 6px;
+         border: 2px solid#67b8b2;
+         transition: all 0.3s ease;
+     }
+     .skills .skills-content .left a:hover{
+         color:#67b8b2;
+         background: none;
+     }
+     .skills .skills-content .right .bars{
+         margin-bottom: 15px;
+     }
+     .skills .skills-content .right .info{
+         display: flex;
+         margin-bottom: 5px;
+         align-items: center;
+         justify-content: space-between;
+     }
+     .skills .skills-content .right span{
+         font-weight: 500;
+         font-size: 18px;
+     }
+     .skills .skills-content .right .line{
+         height: 5px;
+         width: 100%;
+         background: lightgrey;
+         position: relative;
+     }
+     .skills .skills-content .right .line::before{
+         content: "";
+         position: absolute;
+         height: 100%;
+         left: 0;
+         top: 0;
+         background:#67b8b2;
+     }
+     .skills-content .right .html::before{
+         width: 90%;
+     }
+     .skills-content .right .css::before{
+         width: 60%;
+     }
+     .skills-content .right .angular::before{
+         width: 50%;
+     }
+     .skills-content .right .mysql::before{
+         width: 60%;
+     }
+     .skills-content .right .csharp::before{
+      width: 60%;
+  }
+
+
+  .resume .title{
+text-align: center;
+text-decoration: underline;
+  }
+
+  .resume  a{
+    position: relative;
+    left: 1100px;
+    bottom: 50px;
+    color:blue;
+  }
+ 
+ .contact{
+     height: 100vh;
+     width: 100%;
+ }
+ 
+ .contact .contact-content{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-between;
+     position: relative;
+     
+ }
+ .contact .title{
+ text-align: center;
+ margin-bottom: 40px;
+ }
+ .contact .contact-content .column{
+     width: calc(50% - 30px);
+ }
+ .contact .contact-content .text{
+     font-size: 20px;
+     font-weight: 600;
+     margin-bottom: 10px;
+ }
+ .contact .contact-content .left p{
+     text-align: justify;
+ }
+ .contact .contact-content .left .icons{
+     margin: 10px 0;
+ }
+ .contact .contact-content .row{
+     display: flex;
+     height: 65px;
+     align-items: center;
+ }
+ .contact .contact-content .row .info{
+     margin-left: 30px;
+ }
+ .contact .contact-content .row i{
+     font-size: 25px;
+     color:#67b8b2;
+ }
+ .contact .contact-content .info .head{
+     font-weight: 500;
+ }
+ .contact .right form .fields{
+     display: flex;
+ }
+ .contact .right form .field,
+ .contact .right form .fields .field{
+     height: 45px;
+     width: 100%;
+     margin-bottom: 15px;
+ }
+ .contact .right form .textarea{
+     height: 80px;
+     width: 100%;
+ }
+ .contact .right form .name{
+     margin-right: 10px;
+ }
+ .contact .right form .field input,
+ .contact .right form .textarea textarea{
+     height: 100%;
+     width: 100%;
+     border: 1px solid #1b1b1b;
+     border-radius: 6px;
+     outline: none;
+     padding: 0 15px;
+     font-size: 17px;
+     font-family: 'Poppins', sans-serif;
+     transition: all 0.3s ease;
+ }
+ .contact .right form .field input:focus,
+ .contact .right form .textarea textarea:focus{
+     border-color: #1b1b1b;
+ }
+ .contact .right form .textarea textarea{
+   padding-top: 10px;
+   resize: none;
+ }
+ .contact .right form .button-area{
+   display: flex;
+   align-items: center;
+ }
+ .right form .button-area button{
+   color: #1b1b1b;
+   display: block;
+   width: 160px!important;
+   height: 45px;
+   outline: none;
+   font-size: 18px;
+   font-weight: 500;
+   border-radius: 6px;
+   cursor: pointer;
+   flex-wrap: nowrap;
+   background:#67b8b2;
+   border: 2px solid #67b8b2;
+   transition: all 0.3s ease;
+ }
+ .right form .button-area button:hover{
+   color:#67b8b2;
+   background: none;
+ }
+ 
+ 
+ 
+ 
+ html,body{
+     display: grid;
+     height: 100%;
+     width: 100%;
+     place-items: center;
+     background-color: #cbd1d2;
+   }
+   ::selection{
+     color: #fff;
+     background: #1cc7d0;
+   }
+   .wrapper{
+ 
+     height: 300px;
+     width: 320px;
+     position: relative;
+     bottom: 10px;
+     transform-style: preserve-3d;
+       perspective: 1000px;
+   }
+   .wrapper .card{
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     padding: 0px;
+     background: #fff;
+     border-radius: 20px;
+     transform: translateY(0deg);
+     backface-visibility: hidden;
+     transform-style: preserve-3d;
+     box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+     transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+   }
+   .wrapper:hover > .front-face{
+     transform: rotateY(-180deg);
+   }
+   .wrapper .card img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+   }
+   .wrapper:hover > .back-face{
+     transform: rotateY(0deg);
+   }
+   .wrapper .back-face img{
+     height: 150px;
+     width: 150px;
+     padding: 5px;
+     border-radius: 50%;
+     background: linear-gradient(375deg, #373a3a, #2c2e2d);
+   }
+   .wrapper .back-face{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     flex-direction: column;
+     transform: rotateY(180deg);
+     margin: 136px 1px 7px 1px;
+ }
+   .wrapper .back-face .info{
+     text-align: center;
+   }
+   .back-face .info .title{
+     font-size: 30px;
+     font-weight: 500;
+   }
+   .back-face ul{
+     display: flex;
+   }
+   .back-face ul a{
+     display: block;
+     height: 40px;
+     width: 40px;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     margin: 0 5px;
+     line-height: 38px;
+     border: 2px solid transparent;
+     border-radius: 50%;
+     background: linear-gradient(375deg, #f3f6f7, #f1f5f3);
+     transition: all 0.5s ease;
+   }
+   .back-face ul a:hover{
+     color: #fff;
+     border-color: #f5f8f8;
+     background: linear-gradient(375deg, transparent, transparent);
+   }
+   .about .about-content .left img {
+     height: 450px;
+     width: 400px;
+     object-fit: cover;
+     border-radius: 8px;
+     margin: 0 0 0 -40px;
+ }
+</style>
+<body>
+  
+  <header>
+    <nav>
+    <div class="navbar">
+      <div class="logo">
+      <img src="./assets\port folio.gif" alt="">
+       <h2>port <span style="color: crimson;">folio</span> </h2> 
+        <!-- <button class="btn btn-primary">dfewrf</button>  -->
+      </div>
+      <ul class="menu">
+         <li><a href="#content">Home</a></li>
+         <li><a href="#profile">Profile</a></li>
+         <li><a href="#about">About me</a></li>
+         <li><a href="#services">Projects</a></li>
+         <li><a href="#skills">Skills</a></li>
+         <li><a href="#resume">Resume</a></li>
+         <li><a href="#contact">Contact</a></li>
+       </ul>
+       <!-- <div class="search-box">
+         <input type="text" placeholder="Search here...">
+         <a href="#"><i class="fas fa-search"></i></a>
+       </div> -->
+    </div>
+    </nav>
+    <div class="content" id="content">
+      <div class="text-content">
+        <div class="text" style="color: #0f6d8f;">Hello, It's Me </div>
+        <div class="name" style="color: #01100c;">pavan kumar</div>
+        <div class="job">
+          <div class="job">
+            <span style="color: #140101;"></span>
+             <div class="typing-text">
+               <span class="one">I'm an Associate </span>
+               <span class="two">Software Developer.</span>
+            </div></div>
+        </div>
+         <div class="buttons">
+    <button><a href="#contact">Hire me</a></button>
+    <!-- <button><a href="#">Follow Me</a></button> -->
+  </div> 
+      </div>
+      <div class="girl">
+        <img src=".\assets\f-shaggy-ar-emoji.gif" alt="">
+      </div>
+    </div>
+  </header>
+<section class="about" id="about">
+  <div class="max-width">
+      <h2 class="title">About me</h2>
+      <div class="about-content">
+          <div class="column left">
+            <div class="wrapper">
+              <div class="card front-face">
+                <img src="./assets\pass photo.JPG" alt="Flip Card">
+              </div>
+              <div class="card back-face">
+                <img src="./assets\pass photo.JPG" alt="Flip Card">
+                <div class="info">
+                  <div class="title">PAVAN KUMAR</div>
+                  <p>User Interface Designer and <br>Associate Software developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column right">
+
+            <p><span style="font-weight: 600;font-size: 26px;">I'm Pavan Kumar and I'm a</span> <br>Full Stack (C# .Net)  Web Developer And I'm Always Trying To Learn New Things & New Program Languages , I Started Developing Since 2022 With Front-End Language For Now , I Just, Doing Projects For Being Under Developing Challanges And Creating A Good Resume For Myself , At All I Living Code Every Second OF My Life ... 
+            </p>
+               <!-- <a href="./assets/pavan_kumar_2506968 (1).pdf">Download CV</a>  -->
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="profile" id="profile">
+  <div class="max-width">
+      <h2 class="title" style="text-decoration: underline;">Profile</h2>
+      <div class="profile-content">
+          <div class="column left">
+              <img src="./assets\pass photo.JPG" alt="">
+          </div>
+          <div class="column right">
+              <div class="text"> (C# .Net) Full Stack Web Developer <span class="typing-2"></span></div>
+              <div class="row">
+                <div class="col-lg-6">
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Name :</strong> <span>T Pavan Kumar</span>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>City :</strong> <span>Mudigubba</span>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Phone :</strong>
+                            <span>+91-9550939691</span></li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Date Of Birth :</strong>
+                            <span>04 Nov 1999</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Age :</strong> <span>24</span></li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Degree :</strong> <span>Batchelor Of Technology(ECE)</span></li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                            <span>pavankumart0431@gmail.com</span></li>
+                            <li><i class="bi bi-chevron-right"></i> <strong>Address :</strong>
+                              <span>S.Brahmanapalli(V),Mudigubba(M),Satya Sai(D)-515511 ,Andhra Pradesh</span></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="services" id="services">
+  <div class="max-width">
+      <h2 class="title" style="color: black;">Projects</h2>
+      <div class="serv-content">
+          <div class="card">
+              <div class="box">
+               
+                  <div class="text"><span style="color: red;font-weight: 900;text-decoration: underline;">Online Movies</span></div>
+                      <p>  Online Movies : Online movies ticket booking describes a website or online service that lets you browse and book movie tickets from the many movie halls. Most of the online movie booking halls allow the customer to watch the trailers of new movies  and book the tickets by payment ticket price through online transactions.
+                        <br> <small> <span style="color: red;font-weight: 900;text-decoration: underline;"> Technologies Used : </span> <br> Front-end Tool : HTML, CSS, Angular, JS <br> Framework : ASP dot net with Web API <br> Back-end Tool : SSMS <br> Operating System : Windows <br> Language: dot net,c# </small> </p>
+                      </div>
+          </div>
+          <div class="card">
+              <div class="box">
+               
+                  <div class="text" ><span style="color: red;font-weight: 900;text-decoration: underline;">Online Pharmacy</span></div>
+                  <p> Online Pharmacy : Online pharmacies allow you to arrange medications
+                      over the internet through websites and applications (web/mobile). Medicine business online save you the hassle of visiting an actual
+                      pharmacy. You need to upload the actual prescription or doctor's
+                      note on the online pharmacy's portal, and then make the payment through online transactions.
+                      <br> <small> <span style="color: red;font-weight: 900;text-decoration: underline;"> Technologies Used : </span> <br> Front-end Tool : HTML, CSS, Angular, JS <br> Framework : ASP dot net with Web API <br> Back-end Tool : SSMS <br> Operating System : Windows <br> Language: dot net,c# </small> </p>
+              </div>
+          </div>
+         
+         </div>
+      </div>
+  
+</section>
+  
+
+<section class="skills" id="skills">
+  <div class="max-width">
+      <h2 class="title">My skills</h2>
+      <div class="skills-content">
+          <div class="column left">
+              <div class="text">My creative skills & experiences.</div>
+              <p class="p-3">For Now i got no Experiences With Being Any company , But Me and my team work on some RLL projects  And i Hard Trying To Learn New Things And learning team work I Create  Online Projects - Creating Online Shops , Templates - Portfolio Pages ;
+            </p>
+          </div>
+          <div class="column right">
+              <div class="bars">
+                  <div class="info">
+                      <span>HTML</span>
+                      <span>90%</span>
+                  </div>
+                  <div class="line html"></div>
+              </div>
+              <div class="bars">
+                  <div class="info">
+                      <span>CSS</span>
+                      <span>70%</span>
+                  </div>
+                  <div class="line css"></div>
+              </div>
+              <div class="bars">
+                  <div class="info">
+                      <span>Angular</span>
+                      <span>50%</span>
+                  </div>
+                  <div class="line angular"></div>
+              </div>
+              <div class="bars">
+                  <div class="info">
+                      <span>MySQL</span>
+                      <span>60%</span>
+                  </div>
+                  <div class="line mysql"></div>
+              </div>
+              <div class="bars">
+                <div class="info">
+                    <span>C# .NET</span>
+                    <span>60%</span>
+                </div>
+                <div class="line csharp"></div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="resume" id="resume">
+  <div class="max-width">
+    <h2 class="title">Resume</h2>
+    <div class="resumepic">
+      <img src="./assets/PAVAN RESUME.-2506968.jpeg" alt="">
+    </div>
+    
+  </div>
+
+<section class="about" id="about">
+  
+      <div class="about-content">
+          <!-- <div class="column left"> -->
+    
+<div class="right"> <a href="./assets/pavan_kumar_2506968 (1).pdf">Download CV </a>
+
+</div></div>
+</section>
+</section>
+<section class="contact" id="contact">
+  <div class="max-width">
+      <h2 class="title">Contact me</h2>
+      <div class="contact-content">
+          <div class="column left">
+              <div class="text">Get in Touch</div>
+              <div class="icons">
+                  <div class="row">
+                      <i class="fas fa-user"></i>
+                      <div class="info">
+                          <div class="head">Name</div>
+                          <div class="sub-title"> T Pavan Kumar</div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="info">
+                          <div class="head">Address</div>
+                          <div class="sub-title" >S.Brahmanapalli(V),Mudigubba(M),Satya Sai(D)-515511, Andhra Pradesh</div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <i class="fas fa-envelope"></i>
+                      <div class="info">
+                          <div class="head">Email</div>
+                          <div class="sub-title" >pavankumart0431@gmail.com</div>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="column right">
+              <div class="text">Message me</div>
+              <form action="https://formsubmit.co/pavankumart0431@gmail.com " method="post">
+                  <div class="fields" >
+                      <div class="field name">
+                          <input type="text"  placeholder="Name" required>
+                      </div>
+                      <div class="field email">
+                          <input type="email" placeholder="Email" required>
+                      </div>
+                  </div>
+                  <div class="field">
+                      <input type="text" placeholder="Subject" required>
+                  </div>
+                  <div class="field textarea">
+                      <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                  </div>
+                  <div class="button-area">
+                      <button type="submit" style="color: #1b1b1b;">Send message</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+</body>
+</html>
